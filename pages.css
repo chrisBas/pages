@@ -1,0 +1,67 @@
+@keyframes inRight {
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+    to { transform: translate3d(0, 0, 0); }
+  }
+@keyframes inLeft {
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    to { transform: translate3d(0, 0, 0); }
+}
+@keyframes outRight {
+    from { transform: translate3d(0, 0, 0); }
+    to {
+        visibility: hidden;
+        transform: translate3d(100%, 0, 0);
+    }
+}
+@keyframes outLeft {
+    from { transform: translate3d(0, 0, 0); }
+    to {
+        visibility: hidden;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+
+  
+
+  
+
+/* SLIDE DEFINITIONS */
+.inRight {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: inRight;
+}
+.inLeft {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: inLeft;
+}
+.outRight {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: outRight;
+}
+.outLeft {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: outLeft;
+}
+
+
+/* PAGE DEFINITIONS */
+.page {
+    width: 100%;
+    position: absolute;
+}
+.pages {
+    position: relative;
+    overflow: hidden;
+}
+  
