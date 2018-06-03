@@ -8,6 +8,12 @@ This mini js/css library enables someone to easily add simple SPA (single page a
 * jQuery
 
 ## How to use
+* Add the following CDN's to your html header:
+```html
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/chrisBas/pages/master/pages.js"></script>
+<link rel="stylesheet" href="https://rawgit.com/chrisBas/pages/master/pages.css">
+```
 * Add 'pages' and 'page' classes to html div tags as shown here:
 ```html
 <div class="pages">
@@ -29,7 +35,7 @@ This mini js/css library enables someone to easily add simple SPA (single page a
     <button onclick="pg.next()">Next</button>
 </div>
 ```
-* Navigate by using the following javascript calls:
+* Navigate by using the following javascript calls, feel free to bind these to onclick events:
 
 ```javascript
 pg.next() //goes to the next page
