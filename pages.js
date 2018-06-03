@@ -22,7 +22,7 @@ function Pg() {
     }
 
     this.prev = function () {
-        var current = PGS.find(".page." + SIR + ",.page." + SIL);
+        var current = PGS.children(".page." + SIR + ",.page." + SIL);
         var next = current.prev(".page");
         if (next.length != 0) {
             current.removeClass(IN);
@@ -34,7 +34,7 @@ function Pg() {
     }
     
     this.next = function () {
-        var current = PGS.find(".page." + SIR + ",.page." + SIL);
+        var current = PGS.children(".page." + SIR + ",.page." + SIL);
         var next = current.next(".page");
         if (next.length != 0) {
             current.removeClass(IN);
@@ -50,7 +50,7 @@ function Pg() {
         var errors = [];
         if (!Number.isInteger(index)) {
             errors.push("The supplied index is not a valid integer.");
-        } else if (index < 0 || index >= $(PGS).find(".page").length) {
+        } else if (index < 0 || index >= $(PGS).children(".page").length) {
             errors.push("The supplied index is out of bounds.")
         }
         if (errors.length > 0) {
@@ -61,8 +61,8 @@ function Pg() {
         }
 
         // execution
-        var pages = $(PGS).find(".page");
-        var current = $(PGS).find(".page." + SIR + ",.page." + SIL);
+        var pages = $(PGS).children(".page");
+        var current = $(PGS).children(".page." + SIR + ",.page." + SIL);
         var next = $(pages[index]);
         for (var i = 0; i < pages.length; i++) {
             if (pages[i] == current[0]) {
@@ -85,10 +85,10 @@ function Pg() {
     }
 
     function setupPages() {
-        $(".pages").find(".page:not(:first-child)").addClass(SOR);
-        $(".pages").find(".page:first-child").addClass(SIL);
+        $(".pages").children(".page:not(:first-child)").addClass(SOR);
+        $(".pages").children(".page:first-child").addClass(SIL);
         $(".pages").each(function (n, el) {
-            $(el).height($(el).find(".page:first-child").height())
+            $(el).height($(el).children(".page:first-child").height())
         });
     }
 
