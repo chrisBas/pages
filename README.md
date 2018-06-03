@@ -2,7 +2,7 @@
 This mini js/css library enables someone to easily add simple SPA (single page application) functionality to a webpage.
 
 ## Sample
-* <http://www.example.com>
+* <https://chrisbas.github.io/>
 
 ## Dependencies
 * jQuery
